@@ -66,7 +66,7 @@ export default function Home () {
         }
 
         a {
-          color: gold;
+          color: currentColor;
           text-decoration: none;
         }
 
@@ -79,11 +79,18 @@ export default function Home () {
         }
 
         textarea {
+          box-sizing: border-box;
           display: block;
           font-size: 100%;
+          font-family: inherit;
           color: var(--color-dark);
           border-radius: var(--radix);
           padding: 1rem;
+          border: 1px solid;
+        }
+
+        textarea[readonly] {
+          cursor: not-allowed;
         }
 
         textarea::selection {
@@ -106,18 +113,20 @@ export default function Home () {
 
         p {
           margin-top: 0.5rem;
+          white-space: nowrap;
+        }
+
+        a:hover {
+          text-decoration: underline;
         }
 
         main {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 100vw;
+          width: 100%;
           height: 100vh;
         }
 
         section {
-          padding: 0 1rem;
+          padding: 0 2rem;
         }
 
         textarea {
@@ -173,9 +182,28 @@ export default function Home () {
         .logo {
           display: block;
           width: 1.25rem;
+          padding-right: 2rem;
+        }
+
+        header,
+        footer {
+          position: absolute;
+          left: 2rem;
+        }
+
+        header {
+          top: 2rem;
+        }
+
+        footer {
+          bottom: 2rem;
         }
 
         @media screen and (max-width: 40em) {
+          main {
+            padding-top: 5rem;
+          }
+
           button {
             min-width: 100%;
           }
@@ -183,6 +211,9 @@ export default function Home () {
 
         @media screen and (min-width: 40em) {
           main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
           }
         }
@@ -194,6 +225,16 @@ export default function Home () {
         }
       `}</style>
 
+      <header>
+        <a className='logo' href='https://rinaldi.io'>
+          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 12'>
+            <title>Rafael Rinaldi</title>
+            <g fillRule='nonzero' style={{ fill: 'currentColor' }}>
+              <path d='M3.04 12V7.84h1.84L6.928 12h2.384L7.008 7.68a3.286 3.286 0 001.768-1.208c.443-.592.664-1.31.664-2.152 0-.704-.152-1.32-.456-1.848A3.192 3.192 0 007.72 1.24C7.181.947 6.56.8 5.856.8H.928V12H3.04zm2.608-6.064H3.04V2.72h2.608c.501 0 .907.144 1.216.432.31.288.464.677.464 1.168 0 .49-.155.883-.464 1.176-.31.293-.715.44-1.216.44zM12.04 12V7.84h1.84L15.928 12h2.384l-2.304-4.32a3.286 3.286 0 001.768-1.208c.443-.592.664-1.31.664-2.152 0-.704-.152-1.32-.456-1.848A3.192 3.192 0 0016.72 1.24C16.181.947 15.56.8 14.856.8H9.928V12h2.112zm2.608-6.064H12.04V2.72h2.608c.501 0 .907.144 1.216.432.31.288.464.677.464 1.168 0 .49-.155.883-.464 1.176-.31.293-.715.44-1.216.44z' />
+            </g>
+          </svg>
+        </a>
+      </header>
       <main>
         <section>
           <h1>curlyq</h1>
@@ -236,14 +277,7 @@ export default function Home () {
       </main>
 
       <footer>
-        <a className='logo' href='/'>
-          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 12'>
-            <title>Rafael Rinaldi</title>
-            <g fillRule='nonzero' style={{ fill: 'currentColor' }}>
-              <path d='M3.04 12V7.84h1.84L6.928 12h2.384L7.008 7.68a3.286 3.286 0 001.768-1.208c.443-.592.664-1.31.664-2.152 0-.704-.152-1.32-.456-1.848A3.192 3.192 0 007.72 1.24C7.181.947 6.56.8 5.856.8H.928V12H3.04zm2.608-6.064H3.04V2.72h2.608c.501 0 .907.144 1.216.432.31.288.464.677.464 1.168 0 .49-.155.883-.464 1.176-.31.293-.715.44-1.216.44zM12.04 12V7.84h1.84L15.928 12h2.384l-2.304-4.32a3.286 3.286 0 001.768-1.208c.443-.592.664-1.31.664-2.152 0-.704-.152-1.32-.456-1.848A3.192 3.192 0 0016.72 1.24C16.181.947 15.56.8 14.856.8H9.928V12h2.112zm2.608-6.064H12.04V2.72h2.608c.501 0 .907.144 1.216.432.31.288.464.677.464 1.168 0 .49-.155.883-.464 1.176-.31.293-.715.44-1.216.44z' />
-            </g>
-          </svg>
-        </a>
+        <a href='https://github.com/rafaelrinaldi/curlyq'>Source</a>
       </footer>
     </>
   )
