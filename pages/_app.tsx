@@ -9,8 +9,7 @@ const App: FunctionComponent<AppPropsType> = ({ Component, ...props }) => (
       title='curlyq'
       description='Convert straight quotes to smart quotes'
       openGraph={{
-        url: 'https://rinaldi.io',
-        site_name: 'curlyq'
+        url: 'https://curlyq.now.sh'
       }}
       twitter={{
         handle: '@rafaelrinaldi'
