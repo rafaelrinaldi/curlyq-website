@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "name": "curlyq-website",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@rafaelrinaldi/curlyq": "^0.3.0",
+    "clipboardy": "^2.3.0",
+    "next": "9.3.6",
+    "next-seo": "^4.4.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "webfontloader": "^1.6.28"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.5",
+    "@types/react": "^16.9.34",
+    "typescript": "^3.8.3"
+  }
+}
