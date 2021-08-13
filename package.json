@@ -9,7 +9,7 @@
   "dependencies": {
     "@rafaelrinaldi/curlyq": "^0.3.0",
     "clipboardy": "^2.3.0",
-    "next": "9.3.6",
+    "next": "11.1.0",
     "next-seo": "^4.4.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
